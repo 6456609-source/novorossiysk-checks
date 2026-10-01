@@ -28,7 +28,7 @@ const Hero = () => {
           className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,.55)_0%,transparent_60%)]"
         />
         <div className="absolute inset-0 z-[1] flex flex-col items-center justify-center text-center px-5 py-16 text-primary-foreground animate-fade-slow">
-          <span className="mb-6 inline-block rounded-full bg-accent text-accent-foreground px-4 py-2 text-sm md:text-base font-medium">
+          <span className="mb-6 inline-block rounded-[28px] bg-accent text-accent-foreground px-6 py-3 md:px-8 md:py-4 text-[1.75rem] md:text-[2rem] leading-tight font-medium max-w-4xl">
             Чеки и полный пакет документов за проживание — для наших гостей
           </span>
           <h2 className="font-head font-extrabold uppercase leading-[0.98] tracking-[-0.03em] text-[clamp(2.6rem,7vw,3.78em)]">
