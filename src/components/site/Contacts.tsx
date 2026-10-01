@@ -1,10 +1,10 @@
 import Icon from "@/components/ui/icon";
-import { NAV_ALL, PHONE, PHONE_HREF } from "./nav";
+import { NAV_ALL, PHONE, PHONE_HREF, TELEGRAM_HREF, MAX_HREF } from "./nav";
 
 const CHANNELS = [
   { icon: "Phone", label: "Телефон", value: PHONE, href: PHONE_HREF },
-  { icon: "Send", label: "Telegram", value: "@novoros_lux", href: "https://t.me/novoros_lux" },
-  { icon: "MessageCircle", label: "WhatsApp", value: "Написать", href: "https://wa.me/79185552424" },
+  { icon: "Send", label: "Telegram", value: PHONE, href: TELEGRAM_HREF },
+  { icon: "MessageCircle", label: "MAX", value: PHONE, href: MAX_HREF },
   { icon: "Mail", label: "Почта", value: "hello@novoros-lux.ru", href: "mailto:hello@novoros-lux.ru" },
 ];
 

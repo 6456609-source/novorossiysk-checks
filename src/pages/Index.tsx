@@ -6,6 +6,7 @@ import Reviews from "@/components/site/Reviews";
 import Location from "@/components/site/Location";
 import Booking from "@/components/site/Booking";
 import Contacts from "@/components/site/Contacts";
+import FloatingContacts from "@/components/site/FloatingContacts";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Location />
       <Booking />
       <Contacts />
+      <FloatingContacts />
     </main>
   );
 };

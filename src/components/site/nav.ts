@@ -16,5 +16,7 @@ export const NAV_ALL = [
   ...NAV_RIGHT,
 ];
 
-export const PHONE = "+7 (918) 555-24-24";
-export const PHONE_HREF = "tel:+79185552424";
+export const PHONE = "+7 (996) 532-32-43";
+export const PHONE_HREF = "tel:+79965323243";
+export const TELEGRAM_HREF = "https://t.me/+79965323243";
+export const MAX_HREF = "https://max.ru/";
