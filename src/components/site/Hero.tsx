@@ -1,4 +1,13 @@
 import Header from "./Header";
+import Icon from "@/components/ui/icon";
+
+const DOCUMENTS = [
+  { icon: "Receipt", label: "Кассовый чек" },
+  { icon: "FileText", label: "Счёт на оплату" },
+  { icon: "FileCheck", label: "Акт оказанных услуг" },
+  { icon: "FileSignature", label: "Договор" },
+  { icon: "BadgeCheck", label: "Справка о проживании" },
+];
 
 const HERO_PHOTO =
   "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/8dc24030-d891-44df-b5d8-75b7f55e6e35.jpg";
@@ -28,9 +37,20 @@ const Hero = () => {
           className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,.55)_0%,transparent_60%)]"
         />
         <div className="absolute inset-0 z-[1] flex flex-col items-center justify-center text-center px-5 py-16 text-primary-foreground animate-fade-slow">
-          <span className="mb-6 inline-block rounded-[28px] bg-accent text-accent-foreground px-6 py-3 md:px-8 md:py-4 text-[1.75rem] md:text-[2rem] leading-tight font-medium max-w-4xl">
+          <span className="inline-block rounded-[28px] bg-accent text-accent-foreground px-6 py-3 md:px-8 md:py-4 text-[1.35rem] md:text-[2rem] leading-tight font-medium max-w-4xl">
             Чеки и полный пакет документов за проживание — для наших гостей
           </span>
+          <ul className="mt-4 mb-6 flex flex-wrap justify-center gap-2 max-w-3xl">
+            {DOCUMENTS.map((d) => (
+              <li
+                key={d.label}
+                className="flex items-center gap-2 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base"
+              >
+                <Icon name={d.icon} size={16} className="text-accent shrink-0" fallback="FileText" />
+                {d.label}
+              </li>
+            ))}
+          </ul>
           <h2 className="font-head font-extrabold uppercase leading-[0.98] tracking-[-0.03em] text-[clamp(2.6rem,7vw,3.78em)]">
             Люкс
             <br />
