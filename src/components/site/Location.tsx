@@ -27,7 +27,7 @@ const Location = () => {
           </p>
           <p className="mt-6 flex items-start gap-3 font-medium text-lg">
             <Icon name="MapPin" size={22} className="mt-0.5 shrink-0" />
-            г. Новороссийск, ул. Советов, центр города
+            г. Новороссийск, ул. Мира, 20
           </p>
 
           <ul className="mt-8 divide-y divide-border border-y border-border">
