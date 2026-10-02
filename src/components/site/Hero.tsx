@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Icon from "@/components/ui/icon";
 import { DOCUMENTS } from "./documents";
+import { PHONE, PHONE_HREF } from "./nav";
 
 const HERO_PHOTO =
   "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/8dc24030-d891-44df-b5d8-75b7f55e6e35.jpg";
@@ -44,6 +45,13 @@ const Hero = () => {
               </li>
             ))}
           </ul>
+          <a
+            href={PHONE_HREF}
+            className="mb-7 inline-flex items-center gap-3 rounded-full bg-accent text-accent-foreground px-6 py-3 md:px-7 md:py-4 font-head font-bold text-lg md:text-xl shadow-lg hover:scale-105 transition-transform"
+          >
+            <Icon name="Phone" size={20} />
+            Позвонить {PHONE}
+          </a>
           <h2 className="font-head font-extrabold uppercase leading-[0.98] tracking-[-0.03em] text-[clamp(2.6rem,7vw,3.78em)]">
             Люкс
             <br />
