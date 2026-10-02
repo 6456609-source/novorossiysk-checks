@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Host: https://gostinichnie-cheki.ru
+Sitemap: https://gostinichnie-cheki.ru/sitemap.xml
