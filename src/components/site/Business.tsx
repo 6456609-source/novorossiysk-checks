@@ -14,8 +14,8 @@ const Business = () => {
   return (
     <section id="business" ref={ref} className="px-5 md:px-[43px] pt-16 md:pt-24 pb-20 md:pb-28">
       <div className="reveal relative bg-primary text-primary-foreground rounded-panel overflow-hidden p-8 md:p-14">
-        <div aria-hidden="true" className="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-accent/90 blur-0" />
-        <div aria-hidden="true" className="absolute -right-24 -top-24 w-80 h-80 rounded-full border-2 border-accent translate-x-6 translate-y-6" />
+        <div aria-hidden="true" className="absolute -right-24 -top-24 w-44 h-44 md:w-80 md:h-80 rounded-full bg-accent/90 blur-0" />
+        <div aria-hidden="true" className="absolute -right-24 -top-24 w-44 h-44 md:w-80 md:h-80 rounded-full border-2 border-accent translate-x-6 translate-y-6" />
 
         <div className="relative grid xl:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-10 xl:gap-16 items-end">
           <div>

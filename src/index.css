@@ -5,13 +5,13 @@
 @layer base {
   :root {
     /* hero tokens */
-    --hero-bg: #FFFFFF;
+    --hero-bg: #ffffff;
     --hero-surface: #000000;
-    --hero-text: #0A0A0A;
-    --hero-muted: #5E5E5E;
-    --hero-accent: #D7FF3A;
-    --hero-accent-contrast: #0A0A0A;
-    --hero-x-panel-muted: #C4C4C4;
+    --hero-text: #0a0a0a;
+    --hero-muted: #5e5e5e;
+    --hero-accent: #d7ff3a;
+    --hero-accent-contrast: #0a0a0a;
+    --hero-x-panel-muted: #c4c4c4;
     --hero-radius: 22px;
 
     --background: 0 0% 100%;
@@ -132,12 +132,16 @@
   .section-title {
     @apply font-head font-black uppercase leading-[0.95];
     letter-spacing: -0.03em;
-    font-size: clamp(2.2rem, 6vw, 4.6rem);
+    font-size: clamp(1.55rem, 6.6vw, 4.6rem);
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   .reveal {
     opacity: 0;
     transform: translateY(28px);
-    transition: opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1);
+    transition:
+      opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+      transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
   .reveal.is-visible {
     opacity: 1;
@@ -152,6 +156,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .animate-rise, .animate-fade-slow { animation: none !important; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-rise,
+  .animate-fade-slow {
+    animation: none !important;
+  }
 }
