@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Icon from "@/components/ui/icon";
-import { DOCUMENTS } from "./documents";
 import { PHONE, PHONE_HREF } from "./nav";
 
 const Hero = () => {
@@ -21,20 +20,9 @@ const Hero = () => {
         <span className="inline-block rounded-[28px] bg-accent text-accent-foreground px-6 py-3 md:px-8 md:py-4 text-[1.35rem] md:text-[2rem] leading-tight font-medium max-w-4xl">
           Чеки и полный пакет документов за проживание — для наших гостей
         </span>
-        <ul className="mt-4 mb-6 flex flex-wrap justify-center gap-2 max-w-3xl">
-          {DOCUMENTS.map((d) => (
-            <li
-              key={d.label}
-              className="flex items-center gap-2 rounded-full border border-foreground/15 bg-foreground/[0.04] px-3 py-1.5 md:px-4 md:py-2 text-sm md:text-base"
-            >
-              <Icon name={d.icon} size={16} className="text-primary shrink-0" fallback="FileText" />
-              {d.label}
-            </li>
-          ))}
-        </ul>
         <a
           href={PHONE_HREF}
-          className="inline-flex items-center gap-3 rounded-full bg-accent text-accent-foreground px-6 py-3 md:px-7 md:py-4 font-head font-bold text-lg md:text-xl shadow-lg hover:scale-105 transition-transform"
+          className="mt-6 inline-flex items-center gap-3 rounded-full bg-accent text-accent-foreground px-6 py-3 md:px-7 md:py-4 font-head font-bold text-lg md:text-xl shadow-lg hover:scale-105 transition-transform"
         >
           <Icon name="Phone" size={20} />
           Позвонить {PHONE}
