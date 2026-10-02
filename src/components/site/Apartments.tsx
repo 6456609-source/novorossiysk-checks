@@ -91,7 +91,7 @@ const Apartments = () => {
     <section id="apartments" ref={ref} className="bg-primary text-primary-foreground px-5 md:px-[43px] pt-16 md:pt-24 pb-24">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 reveal">
         <div>
-          <p className="eyebrow !text-panel-muted mb-4">01 — Апартаменты</p>
+          <p className="eyebrow !text-panel-muted mb-4">02 — Апартаменты</p>
           <h2 className="section-title">
             Три формата
             <br />

@@ -30,7 +30,7 @@ const Service = () => {
       <div className="px-5 md:px-[43px] py-20 md:py-28">
         <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] gap-10 lg:gap-16">
           <div className="reveal lg:sticky lg:top-10 self-start">
-            <p className="eyebrow mb-4">02 — Удобства и сервис</p>
+            <p className="eyebrow mb-4">03 — Удобства и сервис</p>
             <h2 className="section-title lg:!text-[clamp(2.2rem,4.2vw,4rem)]">
               Как дома.
               <br />

@@ -12,9 +12,9 @@ const Index = () => {
   return (
     <main className="bg-background text-foreground">
       <Hero />
+      <Business />
       <Apartments />
       <Service />
-      <Business />
       <Reviews />
       <Location />
       <Booking />

@@ -1,7 +1,7 @@
 export const NAV_LEFT = [
+  { href: "#business", label: "Командированным" },
   { href: "#apartments", label: "Апартаменты" },
   { href: "#service", label: "Сервис" },
-  { href: "#business", label: "Командированным" },
 ];
 
 export const NAV_RIGHT = [
