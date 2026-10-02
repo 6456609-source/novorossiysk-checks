@@ -1,5 +1,6 @@
 import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/use-reveal";
+import { DOCUMENTS } from "./documents";
 
 const PERKS = [
   { icon: "Laptop", text: "Рабочее место и быстрый интернет в каждом апартаменте" },
@@ -27,6 +28,17 @@ const Business = () => {
             <p className="mt-8 text-xl md:text-2xl leading-snug max-w-2xl">
               Гостям, которые реально у нас проживают, выдаём полный пакет документов для отчёта о командировке.
             </p>
+            <ul className="mt-6 flex flex-wrap gap-2 max-w-2xl">
+              {DOCUMENTS.map((d) => (
+                <li
+                  key={d.label}
+                  className="flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/[0.07] px-4 py-2 text-sm md:text-base"
+                >
+                  <Icon name={d.icon} size={16} className="text-accent shrink-0" fallback="FileText" />
+                  {d.label}
+                </li>
+              ))}
+            </ul>
             <a href="#booking" className="pill-cta mt-10">
               Забронировать <span aria-hidden="true">→</span>
             </a>

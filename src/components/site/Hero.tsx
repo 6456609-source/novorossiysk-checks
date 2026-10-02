@@ -1,13 +1,6 @@
 import Header from "./Header";
 import Icon from "@/components/ui/icon";
-
-const DOCUMENTS = [
-  { icon: "Receipt", label: "Кассовый чек" },
-  { icon: "FileText", label: "Счёт на оплату" },
-  { icon: "FileCheck", label: "Акт оказанных услуг" },
-  { icon: "FileSignature", label: "Договор" },
-  { icon: "BadgeCheck", label: "Справка о проживании" },
-];
+import { DOCUMENTS } from "./documents";
 
 const HERO_PHOTO =
   "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/8dc24030-d891-44df-b5d8-75b7f55e6e35.jpg";
