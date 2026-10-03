@@ -27,7 +27,7 @@ const Location = () => {
           </p>
           <p className="mt-6 flex items-start gap-3 font-medium text-lg">
             <Icon name="MapPin" size={22} className="mt-0.5 shrink-0" />
-            г. Новороссийск, Центральный район, ул. Мира, 20
+            г. Краснодар, ул. Привокзальная, 1
           </p>
 
           <ul className="mt-8 divide-y divide-border border-y border-border">
@@ -46,12 +46,12 @@ const Location = () => {
         <div className="reveal relative min-h-[420px] rounded-panel overflow-hidden bg-primary">
           <iframe
             title="Карта: апартаменты в Новороссийске"
-            src="https://yandex.ru/map-widget/v1/?text=%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%B8%D1%80%D0%B0%2C%2020&z=17"
+            src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%2C%20%D0%9F%D1%80%D0%B8%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%201&z=17"
             className="absolute inset-0 w-full h-full grayscale contrast-125"
             loading="lazy"
           />
           <a
-            href="https://yandex.ru/maps/?text=%D0%9D%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%B8%D1%80%D0%B0%2C%2020&z=17"
+            href="https://yandex.ru/maps/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%2C%20%D0%9F%D1%80%D0%B8%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%201&z=17"
             target="_blank"
             rel="noreferrer"
             className="pill-cta absolute left-4 bottom-4"
