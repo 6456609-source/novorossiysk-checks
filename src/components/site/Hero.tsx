@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="flex flex-col items-center text-center px-5 md:px-[43px] mt-8 md:mt-12 animate-fade-slow">
         <span className="inline-block rounded-[28px] bg-accent text-accent-foreground px-6 py-3 md:px-8 md:py-4 text-[1.35rem] md:text-[2rem] leading-tight font-medium max-w-4xl">
-          Чеки гостиничные полный пакет документов за проживание
+          Чеки гостиничные полный пакет документов за проживание в Краснодаре
         </span>
         <a
           href={PHONE_HREF}

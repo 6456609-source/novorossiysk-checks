@@ -26,7 +26,7 @@ const Business = () => {
               <span className="text-accent">с комфортом</span>
             </h2>
             <p className="mt-8 text-xl md:text-2xl leading-snug max-w-2xl">
-              Выдаём полный пакет документов для отчёта о   командировке. Быстро и без лишних хлопот. Чеки.
+              Выдаём полный пакет документов для отчёта о   командировке. Быстро и без лишних хлопот. Чеки. Документы за проживание в Краснодаре.
             </p>
             <ul className="mt-6 flex flex-wrap gap-2 max-w-2xl">
               {DOCUMENTS.map((d) => (
