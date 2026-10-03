@@ -8,7 +8,7 @@ const Hero = () => {
       <Header />
 
       <h1
-        aria-label="Новороссийск Люкс"
+        aria-label="Краснодар Люкс"
         className="px-5 md:px-[43px] mt-6 md:mt-[30px] font-head font-black leading-none whitespace-nowrap text-foreground tracking-[-0.035em]"
       >
         <span className="block animate-rise origin-left leading-[0.86] text-[clamp(1.9rem,7.9vw,8rem)]">

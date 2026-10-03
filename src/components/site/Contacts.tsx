@@ -59,7 +59,7 @@ const Contacts = () => {
       </div>
 
       <div className="mt-6 flex flex-col sm:flex-row justify-between gap-2 text-panel-muted text-sm">
-        <span>© {new Date().getFullYear()} Новороссийск Люкс. Апартаменты посуточно.</span>
+        <span>© {new Date().getFullYear()} Краснодар Люкс. Апартаменты посуточно.</span>
         <span>Заезд с 14:00 · выезд до 12:00</span>
       </div>
     </footer>

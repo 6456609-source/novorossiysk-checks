@@ -18,14 +18,14 @@ export type Apartment = {
 export const APARTMENTS: Apartment[] = [
   {
     id: "studio",
-    name: "Студия «Бухта»",
+    name: "Студия «Кубань»",
     tag: "Для двоих",
     area: 34,
     guests: 2,
     price: 4900,
     photo:
-      "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/ccd87c30-6c97-4472-86c3-6dea50aa01cf.jpg",
-    short: "Панорамное окно в пол прямо на Цемесскую бухту, двуспальная кровать и рабочее место.",
+      "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/2cc209b5-053c-4da7-b72f-a89282922bbd.jpg",
+    short: "Большое окно на город, двуспальная кровать и рабочее место. Идеально для командировки.",
     amenities: [
       { icon: "BedDouble", label: "Кровать 180×200" },
       { icon: "Wifi", label: "Wi-Fi 300 Мбит/с" },
@@ -37,33 +37,33 @@ export const APARTMENTS: Apartment[] = [
   },
   {
     id: "family",
-    name: "Апартаменты «Набережная»",
+    name: "Апартаменты «Вокзальные»",
     tag: "Хит",
     area: 58,
     guests: 4,
     price: 7400,
     photo:
-      "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/0a4f3e89-873d-4da1-bc81-6cdb3c861a4b.jpg",
-    short: "Отдельная спальня, гостиная с кухней и балкон с видом на море. Пять минут пешком до набережной.",
+      "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/8b76edc2-2658-4233-809d-8871e0f44bc8.jpg",
+    short: "Отдельная спальня, гостиная с кухней и балкон с видом на город. Вокзал — в двух шагах.",
     amenities: [
       { icon: "DoorOpen", label: "Спальня + гостиная" },
       { icon: "CookingPot", label: "Полная кухня" },
       { icon: "WashingMachine", label: "Стиральная машина" },
       { icon: "Wifi", label: "Wi-Fi 300 Мбит/с" },
-      { icon: "Sun", label: "Балкон на море" },
+      { icon: "Sun", label: "Балкон с видом" },
       { icon: "Car", label: "Место на парковке" },
     ],
   },
   {
     id: "penthouse",
-    name: "Пентхаус «Маяк»",
+    name: "Пентхаус «Екатерининский»",
     tag: "Премиум",
     area: 96,
     guests: 6,
     price: 13900,
     photo:
-      "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/9e90c13b-4109-49c8-8d96-d4ec7ca97bff.jpg",
-    short: "Две спальни, собственная терраса над городом и джакузи. Вечерние огни порта — как в кино.",
+      "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/90649551-1592-4fb1-90d0-dbdc5dce26d5.jpg",
+    short: "Две спальни, собственная терраса над городом и джакузи. Вечерние огни Краснодара — как в кино.",
     amenities: [
       { icon: "BedDouble", label: "Две спальни" },
       { icon: "Bath", label: "Джакузи на террасе" },
@@ -95,11 +95,11 @@ const Apartments = () => {
           <h2 className="section-title">
             Три формата
             <br />
-            <span className="text-accent">одного вида</span>
+            <span className="text-accent">для любой поездки</span>
           </h2>
         </div>
         <p className="max-w-sm text-panel-muted text-lg">
-          Все апартаменты — в новом доме у моря, с дизайнерским ремонтом и окнами на бухту. Цена указана за сутки.
+          Все апартаменты — в центре Краснодара у ж/д вокзала, с дизайнерским ремонтом. Цена указана за сутки.
         </p>
       </div>
 

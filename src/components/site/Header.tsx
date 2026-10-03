@@ -21,7 +21,7 @@ const Header = () => {
       </a>
 
       <p className="hidden lg:block whitespace-nowrap uppercase text-foreground text-[0.86em] tracking-[0.04em]">
-        Цемесская бухта · заселение 24/7
+        Краснодар · Привокзальная пл., 1 · заселение 24/7
         <a href="#booking" className="ml-1 text-muted-foreground underline underline-offset-[3px] hover:text-foreground transition-colors">
           Выбрать даты <span aria-hidden="true">→</span>
         </a>

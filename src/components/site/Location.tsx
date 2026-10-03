@@ -2,11 +2,11 @@ import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/use-reveal";
 
 const PLACES = [
-  { min: "5 мин", label: "Набережная Серебрякова", icon: "Footprints" },
-  { min: "10 мин", label: "Мемориал «Малая земля»", icon: "Landmark" },
-  { min: "7 мин", label: "Морской вокзал", icon: "Ship" },
-  { min: "15 мин", label: "Ж/д вокзал Новороссийск", icon: "TrainFront" },
-  { min: "40 мин", label: "Аэропорт Анапы", icon: "Plane" },
+  { min: "1 мин", label: "Ж/д вокзал Краснодар-1", icon: "TrainFront" },
+  { min: "10 мин", label: "Улица Красная", icon: "Footprints" },
+  { min: "15 мин", label: "Парк «Краснодар» (Галицкого)", icon: "Trees" },
+  { min: "10 мин", label: "Екатерининский собор", icon: "Landmark" },
+  { min: "25 мин", label: "Аэропорт Пашковский", icon: "Plane" },
 ];
 
 const Location = () => {
@@ -20,14 +20,14 @@ const Location = () => {
           <h2 className="section-title">
             Центр.
             <br />
-            Море рядом
+            Вокзал рядом
           </h2>
           <p className="mt-6 text-muted-foreground text-lg max-w-md">
-            Новый дом в центре Новороссийска, в пешей доступности от набережной, кафе и главных достопримечательностей.
+            Центр Краснодара у ж/д вокзала, в пешей доступности от улицы Красной, кафе и главных достопримечательностей.
           </p>
           <p className="mt-6 flex items-start gap-3 font-medium text-lg">
             <Icon name="MapPin" size={22} className="mt-0.5 shrink-0" />
-            г. Краснодар, ул. Привокзальная, 1
+            г. Краснодар, Привокзальная пл., 1
           </p>
 
           <ul className="mt-8 divide-y divide-border border-y border-border">
@@ -45,13 +45,13 @@ const Location = () => {
 
         <div className="reveal relative min-h-[420px] rounded-panel overflow-hidden bg-primary">
           <iframe
-            title="Карта: апартаменты в Новороссийске"
-            src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%2C%20%D0%9F%D1%80%D0%B8%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%201&z=17"
+            title="Карта: апартаменты в Краснодаре"
+            src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%2C%20%D0%9F%D1%80%D0%B8%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C%2C%201&z=17"
             className="absolute inset-0 w-full h-full grayscale contrast-125"
             loading="lazy"
           />
           <a
-            href="https://yandex.ru/maps/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%2C%20%D0%9F%D1%80%D0%B8%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%201&z=17"
+            href="https://yandex.ru/maps/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B4%D0%B0%D1%80%2C%20%D0%9F%D1%80%D0%B8%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D1%8C%2C%201&z=17"
             target="_blank"
             rel="noreferrer"
             className="pill-cta absolute left-4 bottom-4"

@@ -1,5 +1,5 @@
 const HERO_PHOTO =
-  "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/8dc24030-d891-44df-b5d8-75b7f55e6e35.jpg";
+  "https://cdn.poehali.dev/projects/172e5f49-d13c-4e4d-b3f0-0f10ceeb28de/files/98eefa68-1a3e-40da-bab9-812503b66b57.jpg";
 
 const Showcase = () => {
   return (
@@ -7,7 +7,7 @@ const Showcase = () => {
       <div className="relative h-[70svh] min-h-[480px] max-h-[760px] bg-primary rounded-panel overflow-hidden">
         <img
           src={HERO_PHOTO}
-          alt="Гостиная апартаментов с панорамным окном на Цемесскую бухту"
+          alt="Гостиная апартаментов в центре Краснодара"
           className="absolute inset-0 w-full h-full object-cover opacity-[.62] grayscale"
         />
         <div
@@ -21,7 +21,7 @@ const Showcase = () => {
             посуточно
           </h2>
           <p className="mt-[22px] text-[1.2em] text-panel-muted tracking-[0.01em] max-w-md">
-            Вид на бухту. Бесконтактное заселение в любое время суток.
+            Центр Краснодара у вокзала. Бесконтактное заселение в любое время суток.
           </p>
           <a href="#booking" className="pill-cta mt-[30px]">
             Забронировать <span aria-hidden="true">→</span>
