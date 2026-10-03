@@ -40,7 +40,7 @@ const Business = () => {
               ))}
             </ul>
             <a href="#booking" className="pill-cta mt-10">
-              Забронировать <span aria-hidden="true">→</span>
+              Заказать <span aria-hidden="true">→</span>
             </a>
           </div>
 
