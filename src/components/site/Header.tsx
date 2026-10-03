@@ -17,7 +17,7 @@ const Header = () => {
       </nav>
 
       <a href="#top" className="lg:hidden font-head font-black uppercase tracking-tight text-sm">
-        Новороссийск<span className="text-muted-foreground"> Люкс</span>
+        любая<span className="text-muted-foreground"> Отчетность</span>
       </a>
 
       <p className="hidden lg:block whitespace-nowrap uppercase text-foreground text-[0.86em] tracking-[0.04em]">
