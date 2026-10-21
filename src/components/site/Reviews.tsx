@@ -34,7 +34,7 @@ const Reviews = () => {
           <h2 className="section-title">
             Говорят
             <br />
-            гости
+            заказчики
           </h2>
         </div>
         <div className="flex items-center gap-6">
