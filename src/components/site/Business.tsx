@@ -39,6 +39,11 @@ const Business = () => {
                 </li>
               ))}
             </ul>
+            <p className="mt-6 text-base md:text-lg leading-relaxed text-panel-muted max-w-2xl">
+              Оформляем чеки для командировки в Краснодаре: кассовый чек за проживание, справку о проживании и
+              отчётные документы гостиницы. Чек гостиницы для бухгалтерии и документы для авансового отчёта
+              выдаём одним пакетом.
+            </p>
             <a href="#booking" className="pill-cta mt-10">
               Заказать <span aria-hidden="true">→</span>
             </a>
