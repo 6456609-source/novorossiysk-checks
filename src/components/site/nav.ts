@@ -12,6 +12,7 @@ export const NAV_RIGHT = [
 export const NAV_ALL = [
   ...NAV_LEFT,
   { href: "#reviews", label: "Отзывы" },
+  { href: "#faq", label: "Вопросы" },
   { href: "#booking", label: "Бронирование" },
   ...NAV_RIGHT,
 ];
