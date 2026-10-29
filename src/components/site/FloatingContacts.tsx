@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Icon from "@/components/ui/icon";
 import { PHONE, PHONE_HREF, TELEGRAM_HREF, MAX_HREF } from "./nav";
 
@@ -6,14 +7,23 @@ const BUTTONS = [
   { href: TELEGRAM_HREF, label: "Написать в Telegram", icon: "Send", text: "", cls: "bg-[#229ED9] text-white" },
 ];
 
+const CALL_TEXTS = ["Позвонить", PHONE];
+
 const FloatingContacts = () => {
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => setIdx((i) => (i + 1) % CALL_TEXTS.length), 2500);
+    return () => clearInterval(t);
+  }, []);
+
   return (
-    <div className="fixed right-4 bottom-4 md:right-6 md:bottom-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed right-4 bottom-4 md:right-6 md:bottom-6 z-[100] flex flex-col items-end gap-3">
       {BUTTONS.map((b) => (
         <a
           key={b.label}
           href={b.href}
-          target={b.href.startsWith("http") ? "_blank" : undefined}
+          target="_blank"
           rel="noreferrer"
           aria-label={b.label}
           title={b.label}
@@ -30,10 +40,23 @@ const FloatingContacts = () => {
         href={PHONE_HREF}
         aria-label={`Позвонить ${PHONE}`}
         title={`Позвонить ${PHONE}`}
-        className="flex items-center gap-2 h-14 px-4 md:px-5 rounded-full bg-accent text-accent-foreground shadow-lg hover:scale-105 transition-transform"
+        className="relative flex items-center gap-2 h-14 pl-4 pr-5 rounded-full bg-accent text-accent-foreground shadow-lg hover:scale-105 transition-transform"
       >
-        <Icon name="Phone" size={24} />
-        <span className="hidden sm:inline font-head font-bold whitespace-nowrap">{PHONE}</span>
+        <span className="absolute inset-0 rounded-full bg-accent animate-ping opacity-30 pointer-events-none" />
+        <Icon name="Phone" size={24} className="relative" />
+        <span className="relative grid font-head font-bold whitespace-nowrap">
+          {CALL_TEXTS.map((t, i) => (
+            <span
+              key={t}
+              className={`[grid-area:1/1] transition-all duration-500 ${
+                i === idx ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+              } ${i === 0 ? "text-center" : ""}`}
+              aria-hidden={i !== idx}
+            >
+              {t}
+            </span>
+          ))}
+        </span>
       </a>
     </div>
   );

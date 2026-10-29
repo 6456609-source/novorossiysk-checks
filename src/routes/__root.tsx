@@ -6,6 +6,7 @@ import {TooltipProvider} from "@/components/ui/tooltip";
 import {PLATFORM_META, PLATFORM_SCRIPTS} from "@/platform/scripts.gen";
 import {HMR_CLIENT} from "@/platform/dev-hmr";
 import NotFound from "@/pages/NotFound";
+import FloatingContacts from "@/components/site/FloatingContacts";
 import appCss from "@/index.css?url";
 
 const TITLE = "+7 (996) 532-32-43 Гостиничные чеки Краснодар. Чеки, документы за проживание.";
@@ -146,6 +147,7 @@ function RootComponent() {
                 <Toaster/>
                 <Sonner/>
                 <Outlet/>
+                <FloatingContacts/>
             </TooltipProvider>
         </RootDocument>
     );
