@@ -2,9 +2,11 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { NAV_ALL, NAV_LEFT, NAV_RIGHT, PHONE, PHONE_HREF } from "./nav";
+import { useCity } from "./city-context";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const city = useCity();
 
   return (
     <header className="relative z-20 grid grid-cols-[1fr_auto] lg:grid-cols-[1fr_auto_1fr] items-center gap-4 px-5 md:px-[43px] pt-[11px]">
@@ -21,7 +23,7 @@ const Header = () => {
       </a>
 
       <p className="hidden lg:block whitespace-nowrap uppercase text-foreground text-[0.86em] tracking-[0.04em]">
-        Краснодар · Привокзальная пл., 1 · заселение 24/7
+        {city.name} · {city.street} · заселение 24/7
         <a href="#booking" className="ml-1 text-muted-foreground underline underline-offset-[3px] hover:text-foreground transition-colors">
           Выбрать даты <span aria-hidden="true">→</span>
         </a>

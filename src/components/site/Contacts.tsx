@@ -1,4 +1,5 @@
 import Icon from "@/components/ui/icon";
+import { useCity } from "./city-context";
 import { NAV_ALL, PHONE, PHONE_HREF, TELEGRAM_HREF, MAX_HREF } from "./nav";
 
 const CHANNELS = [
@@ -9,6 +10,7 @@ const CHANNELS = [
 ];
 
 const Contacts = () => {
+  const city = useCity();
   return (
     <footer id="contacts" className="bg-primary text-primary-foreground rounded-t-panel px-5 md:px-[43px] pt-16 md:pt-24 pb-8 overflow-hidden">
       <div className="grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] gap-12">
@@ -55,11 +57,11 @@ const Contacts = () => {
       </nav>
 
       <div aria-hidden="true" className="mt-10 font-head font-black leading-[0.86] tracking-[-0.035em] whitespace-nowrap text-[clamp(1.9rem,7.9vw,8rem)] text-primary-foreground/10 select-none">
-        НОВОРОССИЙСК
+        {city.name.toUpperCase()}
       </div>
 
       <div className="mt-6 flex flex-col sm:flex-row justify-between gap-2 text-panel-muted text-sm">
-        <span>© {new Date().getFullYear()} Краснодар Люкс. Апартаменты посуточно.</span>
+        <span>© {city.brand}. Апартаменты посуточно. {city.name}, {city.address}</span>
         <span>Заезд с 14:00 · выезд до 12:00</span>
       </div>
     </footer>

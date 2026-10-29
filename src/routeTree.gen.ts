@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnapaRouteImport } from './routes/anapa'
+import { Route as GelendzhikRouteImport } from './routes/gelendzhik'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnapaRoute = AnapaRouteImport.update({
+  id: '/anapa',
+  path: '/anapa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GelendzhikRoute = GelendzhikRouteImport.update({
+  id: '/gelendzhik',
+  path: '/gelendzhik',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/anapa': typeof AnapaRoute
+  '/gelendzhik': typeof GelendzhikRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/anapa': typeof AnapaRoute
+  '/gelendzhik': typeof GelendzhikRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/anapa': typeof AnapaRoute
+  '/gelendzhik': typeof GelendzhikRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/anapa' | '/gelendzhik'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/anapa' | '/gelendzhik'
+  id: '__root__' | '/' | '/anapa' | '/gelendzhik'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnapaRoute: typeof AnapaRoute
+  GelendzhikRoute: typeof GelendzhikRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/anapa': {
+      id: '/anapa'
+      path: '/anapa'
+      fullPath: '/anapa'
+      preLoaderRoute: typeof AnapaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gelendzhik': {
+      id: '/gelendzhik'
+      path: '/gelendzhik'
+      fullPath: '/gelendzhik'
+      preLoaderRoute: typeof GelendzhikRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnapaRoute: AnapaRoute,
+  GelendzhikRoute: GelendzhikRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

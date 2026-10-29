@@ -5,7 +5,8 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useReveal } from "@/hooks/use-reveal";
-import { APARTMENTS } from "./Apartments";
+import { APARTMENTS as BASE } from "./Apartments";
+import { useCity } from "./city-context";
 
 const today = () => new Date().toISOString().slice(0, 10);
 const addDays = (iso: string, d: number) => {
@@ -35,7 +36,9 @@ const Booking = () => {
   const ref = useReveal<HTMLElement>();
   const { toast } = useToast();
 
-  const [apt, setApt] = useState(APARTMENTS[1].id);
+  const city = useCity();
+  const APARTMENTS = BASE.map((a) => ({ ...a, ...city.apartments[a.id] }));
+  const [apt, setApt] = useState(BASE[1].id);
   const [checkIn, setCheckIn] = useState(today());
   const [checkOut, setCheckOut] = useState(addDays(today(), 2));
   const [guests, setGuests] = useState(2);
@@ -83,7 +86,7 @@ const Booking = () => {
     setSent(true);
     toast({
       title: "Заявка принята",
-      description: `${apartment.name}, ${nights} ${nights === 1 ? "ночь" : nights < 5 ? "ночи" : "ночей"}. Перезвоним в течение 15 минут.`,
+      description: `${city.name}, ${apartment.name}, ${nights} ${nights === 1 ? "ночь" : nights < 5 ? "ночи" : "ночей"}. Перезвоним в течение 15 минут.`,
     });
   };
 

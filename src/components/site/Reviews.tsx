@@ -2,17 +2,11 @@ import { useEffect, useState } from "react";
 import Icon from "@/components/ui/icon";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 import { useReveal } from "@/hooks/use-reveal";
-
-const REVIEWS = [
-  { name: "Анна", city: "Москва", apt: "Студия «Кубань»", text: "Приехала ночным поездом — до квартиры буквально минута от вокзала. Чисто, тихо, бельё как в хорошем отеле. Заселялись в час ночи по коду — всё сработало без единого звонка." },
-  { name: "Дмитрий", city: "Ставрополь", apt: "«Вокзальные»", text: "Был в командировке неделю. Рабочий стол у окна, интернет летает, парковка во дворе. Администратор отвечал в мессенджере за пару минут." },
-  { name: "Ольга и Сергей", city: "Санкт-Петербург", apt: "Пентхаус «Екатерининский»", text: "Отмечали годовщину. Терраса с джакузи и огни вечернего города — это лучшее, что можно придумать в Краснодаре. Вернёмся летом." },
-  { name: "Игорь", city: "Ростов-на-Дону", apt: "«Вокзальные»", text: "Ехали вчетвером с детьми. Кухня укомплектована полностью, до вокзала минута пешком. Цена честная, всё как на фото." },
-  { name: "Марина", city: "Екатеринбург", apt: "Студия «Кубань»", text: "Минималистично и стильно. Кофемашина, мягкие полотенца, а главное — вид. Пила кофе на подоконнике и смотрела на вечерний город." },
-];
+import { useCity } from "./city-context";
 
 const Reviews = () => {
   const ref = useReveal<HTMLElement>();
+  const REVIEWS = useCity().reviews;
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 

@@ -1,12 +1,13 @@
 import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/use-reveal";
+import { useCity } from "./city-context";
 
 const ITEMS = [
   { icon: "KeyRound", title: "Бесконтактное заселение", text: "Код от замка приходит в сообщении. Заезжайте в 3 часа ночи — никого не нужно ждать." },
   { icon: "Sparkles", title: "Уборка и свежее бельё", text: "Профессиональная уборка перед каждым заездом, гипоаллергенное бельё и пушистые полотенца." },
   { icon: "Car", title: "Своя парковка", text: "Закрытая парковка во дворе для гостей. Место закрепляем за вами на весь срок." },
   { icon: "Wifi", title: "Быстрый Wi-Fi", text: "Оптоволокно до 500 Мбит/с — хватит для созвонов, стриминга и работы в облаке." },
-  { icon: "TrainFront", title: "Вокзал рядом", text: "Ж/д вокзал Краснодар-1 — в минуте пешком. Удобно приезжать и уезжать в любое время." },
+  null,
   { icon: "Headphones", title: "На связи 24/7", text: "Администратор отвечает в мессенджерах круглосуточно и решает вопросы за минуты." },
 ];
 
@@ -14,6 +15,8 @@ const MARQUEE = ["Отчётные документы о проживании", 
 
 const Service = () => {
   const ref = useReveal<HTMLElement>();
+  const city = useCity();
+  const items = ITEMS.map((it) => it ?? city.nearby);
 
   return (
     <section id="service" ref={ref} className="bg-background">
@@ -42,7 +45,7 @@ const Service = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-px bg-border rounded-panel overflow-hidden border border-border">
-            {ITEMS.map((it, i) => (
+            {items.map((it, i) => (
               <div
                 key={it.title}
                 className="reveal group bg-background p-7 md:p-9 hover:bg-primary hover:text-primary-foreground transition-colors duration-300"

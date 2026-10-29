@@ -1,6 +1,7 @@
 import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/use-reveal";
 import { DOCUMENTS } from "./documents";
+import { useCity } from "./city-context";
 
 const PERKS = [
   { icon: "Laptop", text: "Рабочее место и быстрый интернет в каждом апартаменте" },
@@ -10,6 +11,7 @@ const PERKS = [
 
 const Business = () => {
   const ref = useReveal<HTMLElement>();
+  const city = useCity();
 
   return (
     <section id="business" ref={ref} className="px-5 md:px-[43px] pt-16 md:pt-24 pb-20 md:pb-28">
@@ -26,7 +28,7 @@ const Business = () => {
               <span className="text-accent">с комфортом</span>
             </h2>
             <p className="mt-8 text-xl md:text-2xl leading-snug max-w-2xl">
-              Выдаём полный пакет документов для отчёта о   командировке. Быстро и без лишних хлопот. Чеки. Документы за проживание в Краснодаре. Гостиничные чеки Краснодар.
+              {city.businessLead}
             </p>
             <ul className="mt-6 flex flex-wrap gap-2 max-w-2xl">
               {DOCUMENTS.map((d) => (
@@ -40,9 +42,7 @@ const Business = () => {
               ))}
             </ul>
             <p className="mt-6 text-base md:text-lg leading-relaxed text-panel-muted max-w-2xl">
-              Оформляем чеки для командировки в Краснодаре: кассовый чек за проживание, справку о проживании и
-              отчётные документы гостиницы. Чек гостиницы для бухгалтерии и документы для авансового отчёта
-              выдаём одним пакетом.
+              {city.businessText}
             </p>
             <a href="#booking" className="pill-cta mt-10">
               Заказать <span aria-hidden="true">→</span>

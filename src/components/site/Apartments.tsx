@@ -2,6 +2,7 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { useReveal } from "@/hooks/use-reveal";
+import { useCity } from "./city-context";
 
 export type Apartment = {
   id: string;
@@ -80,6 +81,8 @@ const fmt = (n: number) => n.toLocaleString("ru-RU");
 const Apartments = () => {
   const ref = useReveal<HTMLElement>();
   const [active, setActive] = useState<Apartment | null>(null);
+  const city = useCity();
+  const list = APARTMENTS.map((a) => ({ ...a, ...city.apartments[a.id] }));
 
   const choose = (id: string) => {
     window.dispatchEvent(new CustomEvent("choose-apartment", { detail: id }));
@@ -99,12 +102,12 @@ const Apartments = () => {
           </h2>
         </div>
         <p className="max-w-sm text-panel-muted text-lg">
-          Все апартаменты — в центре Краснодара у ж/д вокзала, с дизайнерским ремонтом. Цена указана за сутки.
+          {city.aptNote}
         </p>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {APARTMENTS.map((a, i) => (
+        {list.map((a, i) => (
           <article
             key={a.id}
             className="reveal group flex flex-col bg-primary-foreground/[0.06] rounded-panel overflow-hidden"
